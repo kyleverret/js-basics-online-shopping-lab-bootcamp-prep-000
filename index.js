@@ -19,7 +19,7 @@ function addToCart(item) {
 function viewCart() {
   var resLine = "In your cart, you have";
   if (cart.length == 0){
-    return "Your shopping cart is empty";
+    return "Your shopping cart is empty.";
   }
   else if (cart.length == 1){
     resLine = resLine + ` ${cart[0].itemName} at $${cart[0].itemPrice}.`;
@@ -57,8 +57,8 @@ function placeOrder(cardNumber) {
     return "Sorry, we don't have a credit card on file for you."
   }
   else {
-    var total = total();
+    var totalA = total();
     cart = [];
-    return `Your total cost is ${total}, which will be charged to the card ${cardNumber}.`
+    return `Your total cost is ${totalA}, which will be charged to the card ${cardNumber}.`
   }
 }
